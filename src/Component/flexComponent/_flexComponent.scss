@@ -1,0 +1,155 @@
+.flex-component {
+  width: 95%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .flex-texts {
+    margin: 2rem 0;
+    margin: 0 auto;
+    width: 50%;
+    padding-right: 3rem;
+    h6 {
+      background: linear-gradient(to right, #4398b9 0%, #0071f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 35px;
+      font-weight: 900;
+    }
+    h5 {
+      font-size: 40px;
+      font-weight: 800;
+      color: $dark-color;
+    }
+    p {
+      color: $dark-color;
+      margin: 1rem 0;
+      font-size: 18px;
+    }
+    a {
+      padding: 10px 20px;
+      background-color: $dark-color;
+      color: $light-color;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+  .flex-img {
+    margin: 1rem auto;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      height: 30vh;
+      transform: rotate(15deg);
+      transition: transform 0.3s ease;
+    }
+  }
+  &:hover {
+    .flex-img {
+      img {
+        transform: rotate(0);
+      }
+    }
+  }
+  &.flex-revevrse {
+    flex-direction: row-reverse;
+    .flex-img {
+      justify-content: flex-start;
+    }
+  }
+}
+@media only screen and (max-width: $xl-size) {
+  .flex-component {
+    .flex-texts {
+      h6 {
+        font-size: 30px;
+      }
+      h5 {
+        font-size: 35px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $lg-size) {
+  .flex-component {
+    .flex-img {
+      img {
+        height: 25vh;
+      }
+    }
+    .flex-texts {
+      padding-right: 1rem;
+      h6 {
+        font-size: 25px;
+      }
+      h5 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $md-size) {
+  .flex-component {
+    .flex-img {
+      img {
+        height: 20vh;
+      }
+    }
+    .flex-texts {
+      padding-right: 0.5rem;
+      h6 {
+        font-size: 20px;
+      }
+      h5 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $sm-size) {
+  .flex-component {
+    flex-direction: column;
+    .flex-texts,
+    .flex-img {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+      img {
+        margin: 2rem auto;
+        height: 20vh;
+      }
+    }
+    &.flex-revevrse {
+      flex-direction: column;
+      .flex-img {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $xsm-size) {
+  .flex-component {
+    flex-direction: column;
+    .flex-texts {
+        h6 {
+            font-size: 18px;
+          }
+          h5 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 12px;
+          }
+    }
+  }
+}

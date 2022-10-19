@@ -1,0 +1,77 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.9s ease-in-out;
+  .logo {
+    width: 100px;
+    margin-left: 3rem;
+    img {
+      width: 100%;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    img {
+      width: 30px;
+      height: 100%;
+      margin-left: 20px;
+      cursor: pointer;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .shopping {
+      position: relative;
+      width: 20px;
+      height: auto;
+      object-fit: cover;
+      p {
+        position: absolute;
+        bottom: -3px;
+        right: -10px;
+        background-color: $light-color;
+        color: $dark-color;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+    }
+  }
+  &.navbar-f {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: $menu-gradient;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media only screen and (max-width: $sm-size) {
+  .navbar {
+    height: 60px;
+    .logo {
+      width: 60px;
+      margin-left: 1.5rem;
+    }
+    .icons {
+      margin-right: 1.5rem;
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
